@@ -1,0 +1,32 @@
+body {
+  font-family: Helvetica;
+}
+
+#root .app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aliceblue;
+}
+.app {
+  background-color: aliceblue;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  flex: 0 0 50%;
+}
+
+.right {
+  flex: 0 0 50%;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+}

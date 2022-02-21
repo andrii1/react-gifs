@@ -42,21 +42,9 @@ input[type=text] {
 }
 
 .show {
-  height: calc(100vh - 150px);
-  //height: 100%;
-  border: 1px solid red;
-}
-
-.show-container {
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid red;
-}
+  justify-content: space-between;
 
-.show-gif {
-  width: 100px;
-  height: 100px;
-  border: 1px solid grey;
+
 }

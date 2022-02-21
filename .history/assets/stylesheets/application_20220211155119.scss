@@ -42,13 +42,8 @@ input[type=text] {
 }
 
 .show {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 250px);
   //height: 100%;
-  border: 1px solid red;
-}
-
-.show-container {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,4 +54,5 @@ input[type=text] {
   width: 100px;
   height: 100px;
   border: 1px solid grey;
+  flex: 0 0 50%;
 }
