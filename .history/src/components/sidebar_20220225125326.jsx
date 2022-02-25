@@ -9,12 +9,7 @@ class Sidebar extends Component {
   //state = {  }
   render() {
     return (
-      <div>
-      {gifs1.map(gif => {
-        return <Gif id={gif.id} key={gif.id} />
 
-      })}
-      </div>
     )
 
 

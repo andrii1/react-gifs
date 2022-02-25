@@ -8,16 +8,13 @@ const gifs1 = [
 class Sidebar extends Component {
   //state = {  }
   render() {
+    this.props.gifs1.map(gif => {
+      return <Gif id={gif.id} key={gif.id} />
+
+    })
     return (
-      <div>
-      {gifs1.map(gif => {
-        return <Gif id={gif.id} key={gif.id} />
-
-      })}
-      </div>
-    )
-
-
+      <div>3</div>
+    );
   }
 }
 

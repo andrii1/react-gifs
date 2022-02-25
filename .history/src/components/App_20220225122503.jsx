@@ -12,10 +12,10 @@ class App extends Component {
    }
 
   search(query) {
-    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=homer&limit=10`
+    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
     fetch(giphEndpoint).then(response => response.json()).then((data) => {
       const gifs = data.data.map(giph => giph.id)
-      this.setState({
+      setState({
         gifs: gifs
       })
       console.log(gifs)

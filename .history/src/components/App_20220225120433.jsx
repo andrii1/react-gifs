@@ -12,13 +12,12 @@ class App extends Component {
    }
 
   search(query) {
-    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=homer&limit=10`
+    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
     fetch(giphEndpoint).then(response => response.json()).then((data) => {
       const gifs = data.data.map(giph => giph.id)
       this.setState({
         gifs: gifs
       })
-      console.log(gifs)
     })
   }
 
@@ -28,7 +27,7 @@ class App extends Component {
         <div className="left">
           <div className="left-container">
           <Search searchFunction={this.search} />
-          <Show id={this.state.selectedGifId}  />
+            <Show />
           </div>
         </div>
         <div className="right"><Sidebar /></div>
