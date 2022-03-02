@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "xT9IgDEI1iZyb2wqo8"
+      selectedGifId:
     };
     this.search = this.search.bind(this);
     this.selectGif = this.selectGif.bind(this);
@@ -44,7 +44,7 @@ class App extends Component {
           <Show id={this.state.selectedGifId}  />
           </div>
         </div>
-      <div className="right"><Sidebar gifs={this.state.gifs} selectGif={this.selectGif} /></div>
+        <div className="right"><Sidebar gifs={this.state.gifs} /></div>
 
     </div>);
   }

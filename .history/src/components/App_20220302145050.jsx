@@ -44,7 +44,7 @@ class App extends Component {
           <Show id={this.state.selectedGifId}  />
           </div>
         </div>
-      <div className="right"><Sidebar gifs={this.state.gifs} selectGif={this.selectGif} /></div>
+        <div className="right"><Sidebar gifs={this.state.gifs} /></div>
 
     </div>);
   }
