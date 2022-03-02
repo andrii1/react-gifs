@@ -35,9 +35,5 @@
     "start": "webpack-dev-server --mode development",
     "lint": "eslint './src/**/*.js*'",
     "deploy": "webpack -p && gh-pages -d dist"
-  },
-  "engines": {
-    "node": "14.15.5",
-    "npm": "6.14.11"
   }
 }
