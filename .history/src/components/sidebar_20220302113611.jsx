@@ -16,7 +16,7 @@ class Sidebar extends Component {
     return (
       <div className='gif-list'>
         {this.props.gifs.map(gif => {
-          return <Gif id={gif[1]} key={gif.id} />
+          return <Gif id={gif[0]} key={gif.id} />
         })}
       </div>
     )

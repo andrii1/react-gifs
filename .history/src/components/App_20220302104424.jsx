@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import giphy from 'giphy-api';
 import Search from './Search'
 import Show from './Show'
 import Sidebar from './Sidebar'
@@ -29,7 +28,6 @@ class App extends Component {
     })
   }
 
-
   render() {
     return (<div className="app">
 
@@ -39,7 +37,7 @@ class App extends Component {
           <Show id={this.state.selectedGifId}  />
           </div>
         </div>
-        <div className="right"><Sidebar gifs={this.state.gifs} /></div>
+        <div className="right"><Sidebar /></div>
 
     </div>);
   }

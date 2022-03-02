@@ -5,19 +5,17 @@ import Gif from './gif'
 const gifs1 = [
   { id: "S2wyeivEIBLPIFzM74" },
   { id: "sTczweWUTxLqg"},
-  { id: "mVTHTOUsvduNfYRO15" },
-  { id: "sJWNLTclcvVmw" }
-
+  { id: "aTczweWUTxLqg" }
   ]
-
 class Sidebar extends Component {
   //state = {  }
   render() {
     return (
-      <div className='gif-list'>
-        {this.props.gifs.map(gif => {
-          return <Gif id={gif[1]} key={gif.id} />
-        })}
+      <div>
+      {gifs1.map(gif => {
+        return <Gif id={gif.id} key={gif.id} />
+
+      })}
       </div>
     )
 

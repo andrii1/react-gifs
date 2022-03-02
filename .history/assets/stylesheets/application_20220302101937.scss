@@ -24,14 +24,14 @@ body {
 .right {
   flex: 0 0 50%;
   border: black 1px solid;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 20px 20px 20px;
   overflow: scroll;
 }
 
 .gif-list {
   column-count: 2;
     column-gap: 5px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
 }
 
 .left-container {
@@ -66,8 +66,4 @@ input[type=text] {
   //width: 100px;
   //height: 100px;
   border: 1px solid grey;
-}
-
-.image {
-  padding-top: 10px;
 }

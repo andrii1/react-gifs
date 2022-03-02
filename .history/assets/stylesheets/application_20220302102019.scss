@@ -31,7 +31,7 @@ body {
 .gif-list {
   column-count: 2;
     column-gap: 5px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
 }
 
 .left-container {
@@ -66,8 +66,4 @@ input[type=text] {
   //width: 100px;
   //height: 100px;
   border: 1px solid grey;
-}
-
-.image {
-  padding-top: 10px;
 }

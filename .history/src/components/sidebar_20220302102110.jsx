@@ -6,18 +6,18 @@ const gifs1 = [
   { id: "S2wyeivEIBLPIFzM74" },
   { id: "sTczweWUTxLqg"},
   { id: "mVTHTOUsvduNfYRO15" },
-  { id: "sJWNLTclcvVmw" }
+  { id: "mVTHTOUsvduNfYRO15" }
 
   ]
-
 class Sidebar extends Component {
   //state = {  }
   render() {
     return (
       <div className='gif-list'>
-        {this.props.gifs.map(gif => {
-          return <Gif id={gif[1]} key={gif.id} />
-        })}
+      {gifs1.map(gif => {
+        return <Gif id={gif.id} key={gif.id} />
+
+      })}
       </div>
     )
 

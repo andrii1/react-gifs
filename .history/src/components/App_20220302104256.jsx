@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import giphy from 'giphy-api';
 import Search from './Search'
 import Show from './Show'
 import Sidebar from './Sidebar'
@@ -15,20 +14,19 @@ class App extends Component {
       selectedGifId: "xT9IgDEI1iZyb2wqo8"
     };
     this.search = this.search.bind(this);
-    //this.selectGif = this.selectGif.bind(this);
+    this.selectGif = this.selectGif.bind(this);
   }
 
   search(query) {
     const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
     fetch(giphEndpoint).then(response => response.json()).then((data) => {
       const gifs = data.data.map(giph => giph.id)
-      this.setState({
-        gifs: gifs
-      })
+      //this.setState({
+      //  gifs: gifs
+      //})
       console.log(gifs)
     })
   }
-
 
   render() {
     return (<div className="app">
@@ -39,7 +37,7 @@ class App extends Component {
           <Show id={this.state.selectedGifId}  />
           </div>
         </div>
-        <div className="right"><Sidebar gifs={this.state.gifs} /></div>
+        <div className="right"><Sidebar /></div>
 
     </div>);
   }

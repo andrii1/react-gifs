@@ -25,7 +25,6 @@ class App extends Component {
       this.setState({
         gifs: gifs
       })
-      console.log(gifs)
     })
   }
 

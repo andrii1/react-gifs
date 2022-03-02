@@ -15,7 +15,7 @@ class App extends Component {
       selectedGifId: "xT9IgDEI1iZyb2wqo8"
     };
     this.search = this.search.bind(this);
-    //this.selectGif = this.selectGif.bind(this);
+    this.selectGif = this.selectGif.bind(this);
   }
 
   search(query) {
@@ -29,7 +29,6 @@ class App extends Component {
     })
   }
 
-
   render() {
     return (<div className="app">
 
@@ -39,7 +38,7 @@ class App extends Component {
           <Show id={this.state.selectedGifId}  />
           </div>
         </div>
-        <div className="right"><Sidebar gifs={this.state.gifs} /></div>
+        <div className="right"><Sidebar /></div>
 
     </div>);
   }

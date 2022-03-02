@@ -18,15 +18,18 @@ class App extends Component {
     //this.selectGif = this.selectGif.bind(this);
   }
 
-  search(query) {
-    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
-    fetch(giphEndpoint).then(response => response.json()).then((data) => {
-      const gifs = data.data.map(giph => giph.id)
+  search = (query) => {
+    giphy('1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm').search({
+      q: query,
+      rating: 'g',
+      limit: 10
+    }, function (err, res) {
+      const gifs = res.map(giph => giph.id)
       this.setState({
         gifs: gifs
       })
-      console.log(gifs)
-    })
+      // Res contains gif data!
+    });
   }
 
 

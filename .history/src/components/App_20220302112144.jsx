@@ -18,6 +18,18 @@ class App extends Component {
     //this.selectGif = this.selectGif.bind(this);
   }
 
+  search = (query) => {
+    giphy.search({
+      q: query,
+      rating: 'g',
+      limit: 10
+    }, function (err, res) {
+        this.setState({
+          gifs: gifs
+        })
+      // Res contains gif data!
+    });
+  }
   search(query) {
     const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=${GIPHY_API_KEY}&q=${query}&limit=10`
     fetch(giphEndpoint).then(response => response.json()).then((data) => {
@@ -28,7 +40,6 @@ class App extends Component {
       console.log(gifs)
     })
   }
-
 
   render() {
     return (<div className="app">
